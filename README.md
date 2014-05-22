@@ -6,7 +6,7 @@ It's recommended to fork this presentation into either your personal repos, or a
 
 ## Simple Usage: 
 
-Just open the index.html file in `chrome` (or other browser).
+Just open the `index.html` file in `chrome` (or other browser).
 
 ## Advanced Usage:
 
