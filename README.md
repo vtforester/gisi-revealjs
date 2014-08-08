@@ -14,3 +14,8 @@ Just open the `index.html` file in `chrome` (or other browser).
 1. Navigate to the directory
 1. `npm install`
 1. `grunt serve`
+=======
+gisi-revealjs
+=============
+
+GISi flavored presentation format for Reveal.js
