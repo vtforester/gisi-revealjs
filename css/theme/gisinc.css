@@ -43,7 +43,6 @@ body {
 	position:relative;
 	z-index:30;
 }
-
 .logo {
   display:block;
   position:absolute;
@@ -202,3 +201,31 @@ em {
  *********************************************/
 .reveal .slide-number {
   color: #f15a23; }
+
+
+// Description Lists
+.reveal dl {
+  margin-top: 0; 
+  margin-bottom: 20px;
+}
+.reveal dt,
+.reveal dd {
+  line-height: 1.42857143;
+}
+.reveal dt {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.reveal dd {
+  margin-left: 0; 
+  margin-bottom: 40px;
+}
+.reveal .title {
+  margin-bottom: 60px;
+}
+.reveal pre {
+  box-shadow: none;
+}
+.reveal pre code {
+  max-height: 450px;
+}

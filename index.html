@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>SpinalMap</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -16,7 +16,7 @@
 
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/gisinc.css" id="theme">
-
+		<link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -44,13 +44,68 @@
 		<div class="slides">
 
       <section>
-      	GISi
+      	<h2 class="title">This is SpinalMap</h2>
+      	<dl>
+      		<dt>What is it?</dt>
+      		<dd>A JavaScript <em>library</em> containing generic functionality commonly used in Backbone/Bootstrap/ESRI mapping applications.</dd>
+      		<dd>It is packaged as a collection of AMD modules and <em>distributed</em> using Bower.</dd>  		
+      	</dl>
       </section>
-
       <section>
-      	<a href="http://gisinc.com">Check out our website</a>
+		<dl>
+      		<dt>Why did we create it?</dt>
+      		<dd>Reusability...we were building multiple Backbone applications that required the same (or similar) components.</dd>
+      		<dd>So, we decided to write the code in a more generic fashion and <em>distribute</em> it using a package manager.</dd>    
+      	</dl>
       </section>
+      <section>
+      	<dl>
+      		<dt>Who is it for?</dt>
+      		<dd>JavaScript developers that want to use this particular technology stack.</dd>
+      		<dd>It is not WAB so it does require programming knowledge.</dd>
+      	</dl>
+      </section>
+      <section>
+		<dl>
+      		<dt>How do I get it?</dt>
+      		<dd>Just like any other JavaScript library...<br/><code>bower install https://git.gisinc.com/scm/js/spinalmap.git#develop --save</code></dd>
+      	</dl>
+      </section>
+      <section>
+      	<dl>
+      		<dt>How do I use it?</dt>
+      		<dd>Once it's installed, reference the scripts and stylesheets in your page (after the JSAPI) and require modules</dd>
+      	</dl>
+      	<pre><code class="javascript">
+require(['spinalmap/map-view', 
+		 'spinalmap/grid/grid-collection', 
+		 'spinalmap/grid/grid-collection-view', 
+		 'jquery'], function(MapView, GridCollection, GridCollectionView, $) {
+	var mapView = new MapView({
+		el: $('main'),
+		collection: config.services,
+		mapOptions: config.mapOptions
+	});
 
+	mapView.on('layers-added', function(layers) {		
+		var gridCollection = new GridCollection(config.grids);
+	    var gridCollectionView = new GridCollectionView({ 
+	    	el: $('main'), 
+	    	model: mapView.model.layers, 
+	    	grids: config.grids 
+	    });
+	    gridView.render();
+	});
+	mapView.load();
+});
+     	</code>
+     </pre>
+      	<!-- Enough with the slides...
+      	<a href="https://git.gisinc.com/projects/JS/repos/spinalmap/browse">Check out the repo</a> -->
+      </section>
+		<section>
+<h2><a href="http://baservge3/smartsite" target="_blank">Demo</a>?</h2>
+		</section>
 		</div>
       
       <div class="top-bar"> &nbsp;	</div>
@@ -60,7 +115,6 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
-
 		<script>
 
 			// Full list of configuration options available here:

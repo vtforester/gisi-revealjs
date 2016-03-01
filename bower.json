@@ -1,0 +1,27 @@
+{
+  "name": "spinalmap-prezi",
+  "version": "0.0.1",
+  "homepage": "https://github.com/vtforester/gisi-revealjs",
+  "authors": [
+    "Jeff Galang <Jeff.Galang@gisinc.com>"
+  ],
+  "description": "Reveal presentation describing SpinalMap JavaScript library",
+  "main": "index.html",
+  "keywords": [
+    "reveal",
+    "GISi",
+    "spinalmap"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "~3.2.0"
+  }
+}
